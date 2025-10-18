@@ -58,17 +58,6 @@ jobs:
           continue-on-error: false
 
         # Continuous releases
-        - name: release stable
-          uses: marvinpinto/action-automatic-releases@latest
-          with:
-            title: Continuous Stable
-            automatic_release_tag: continuous-stable
-            prerelease: false
-            draft: false
-            files: |
-              *stable*.AppImage*
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-
         - name: release esr
           uses: marvinpinto/action-automatic-releases@latest
           with:
@@ -78,37 +67,4 @@ jobs:
             draft: false
             files: |
               *esr*.AppImage*
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-
-        - name: release beta
-          uses: marvinpinto/action-automatic-releases@latest
-          with:
-            title: Continuous Beta
-            automatic_release_tag: continuous-beta
-            prerelease: true
-            draft: false
-            files: |
-              *beta*.AppImage*
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-
-        - name: release devedition
-          uses: marvinpinto/action-automatic-releases@latest
-          with:
-            title: Continuous Devedition
-            automatic_release_tag: continuous-devedition
-            prerelease: true
-            draft: false
-            files: |
-              *devedition*.AppImage*
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-
-        - name: release nightly
-          uses: marvinpinto/action-automatic-releases@latest
-          with:
-            title: Continuous Nightly
-            automatic_release_tag: continuous-nightly
-            prerelease: true
-            draft: false
-            files: |
-              *nightly*.AppImage*
             repo_token: ${{ secrets.GITHUB_TOKEN }}
