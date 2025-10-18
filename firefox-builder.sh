@@ -53,7 +53,7 @@ Exec=firefox --private-window %u"
 _create_firefox_appimage() {
 	# Detect the channel
 	if [ "$CHANNEL" != stable ]; then
-		DOWNLOAD_URL="https://download-installer.cdn.mozilla.net/pub/firefox/releases/140.2.0esr/linux-x86_64/en-US/firefox-140.2.0esr.tar.xz"
+		DOWNLOAD_URL="https://download-installer.cdn.mozilla.net/pub/firefox/releases/140.1.0esr/linux-x86_64/en-US/firefox-140.1.0esr.tar.xz"
 	else
 		DOWNLOAD_URL="https://download.mozilla.org/?product=$APP-latest&os=linux64"
 	fi
